@@ -1,0 +1,8 @@
+name: docker_image_node_runner
+#Now, instead of installing node js with the action, use a node image for the tests of the node-app
+on:
+  push:
+  pull_request:
+
+jobs:
+  
