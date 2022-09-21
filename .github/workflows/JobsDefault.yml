@@ -1,0 +1,20 @@
+name: Job's Default
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  install-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: node-app
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+  
+      - name: Run tests
+        run: npm test
+      
