@@ -1,0 +1,83 @@
+name: push_on_any_branch_exepct_staging
+
+# on:
+#   push:
+#       branches:
+#         - "dev"
+# jobs:
+#     push_dev:
+#       runs-on: ubuntu-latest
+
+#       steps:
+#       - name: Hello les mecs
+#         run: |
+#           echo Salut les gars
+    
+# on:
+#   push:
+#       branches-ignore:
+#         - "staging"
+
+# jobs:
+#     push_on_any_branch_exepct_staging:
+      
+#       runs-on: ubuntu-latest
+
+#       steps:
+#       - name: Hello tout le monde sauf staging
+#         run: |
+#           echo Salut les autres branches
+
+# on:
+#   push:
+#       branches:
+#         - "feat/*"
+# jobs:
+#     push_branch_with_feature:
+      
+#       runs-on: ubuntu-latest
+
+#       steps:
+#       - name: Hello tout le monde avec feature
+#         run: |
+#           echo Salut les gars
+
+# on:
+#   push:
+#       paths:
+#         - "**.ts"
+# jobs:
+#     push_ts_file:
+      
+#       runs-on: ubuntu-latest
+
+#       steps:
+#       - name: Hello tout le monde 
+#         run: |
+#           echo Salut les gars
+
+# on:
+#   push:
+#       paths:
+#         - ".github/workflows/**"
+# jobs:
+#     push_wokflows_folder:
+      
+#       runs-on: ubuntu-latest
+
+#       steps:
+#       - name: Hello tout le monde sauf staging
+#         run: |
+#           echo Salut les autres branches
+
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  pull_request_created:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Hello les mecs
+      run: |
+        echo Salut les gars
+
