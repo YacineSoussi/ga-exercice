@@ -11,3 +11,4 @@ jobs:
           token: ${{ secrets.PERSONAL_TOKEN }}
           event-type: MyEvent
           client-payload: '{"paramA": "123"}'
+          
