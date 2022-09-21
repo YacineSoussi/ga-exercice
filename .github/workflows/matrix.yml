@@ -3,13 +3,15 @@ name: Matrix exercices
 on:
   push:
   pull_request:
-
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
+    defaults:
+      run:
+        working-directory: node-app
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
